@@ -119,5 +119,17 @@
 		$('.scrolly').scrolly({
 			speed: 1000
 		});
+		
+		
+		$(document).ready(function(){
+			setTimeout(function() {
+				var scroll = $(window).scrollTop();
+				scroll = scroll + 350; //pixels to scroll
+				$('html, body').animate({
+					scrollTop: scroll
+				}, 2000); //scroll speed in ms
+			}, 2000); // Delay in milliseconds (e.g., 2000 milliseconds = 2 seconds)
+		});
+
 
 })(jQuery);
