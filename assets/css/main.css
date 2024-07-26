@@ -103,7 +103,7 @@ input, select, textarea {
 		background-image: url("images/overlay.png"), -moz-linear-gradient(90deg, #dbce1e71 15%, #004d40 85%);
 		background-image: url("images/overlay.png"), -webkit-linear-gradient(90deg, #dbce1e71 15%, #004d40 85%);
 		background-image: url("images/overlay.png"), -ms-linear-gradient(90deg, #dbce1e71 15%, #004d40 85%);
-		background-image: url("images/overlay.png"), linear-gradient(90deg, #dbce1e71 10%, #004d40 90%);
+		background-image: url("images/overlay.png"), linear-gradient(90deg, #dbce1e71 10%, #004d40 75%);
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -1307,15 +1307,6 @@ input, select, textarea {
 							padding-top: 3em;
 						}
 
-		}
-
-		.circle-video {
-			width: 200px; /* Adjust size as needed */
-			height: 200px; /* Adjust size as needed */
-			border-radius: 50%; /* Makes the video circular */
-			overflow: hidden; /* Ensures the video stays within the circle */
-			display: block;
-			margin: auto; /* Center the video */
 		}
 
 		@media screen and (max-width: 736px) {
@@ -3354,6 +3345,7 @@ input, select, textarea {
 
 		#main a:hover {
 			color: #636363;
+			
 		}
 
 		#main strong, #main b {
@@ -3792,3 +3784,44 @@ input, select, textarea {
 			}
 
 		}
+
+/* Circle Video */
+
+.circle-video {
+	display: inline-block; /* Aligns the iframe inline with other elements */
+    vertical-align: middle;
+    width: 300px; /* Adjust width as needed */
+    height: 200px; /* Make height equal to width for a perfect circle */
+    border-radius: 30%; /* Make the video shape a circle */
+    overflow: hidden; /* Ensures no overflow outside the circle */
+    object-fit: cover; /* Ensures the video covers the circle area without distortion */
+	margin-bottom: 15px;
+}
+
+.bold-underline {
+    font-weight: bold; /* Makes the text bold */
+    text-decoration: underline; /* Underlines the text */
+}
+
+.scroller {
+    display: flex;
+    overflow-x: hidden; /* Hide overflow to make items disappear */
+    animation: scroll 6s linear infinite;
+	
+}
+
+.scroller li {
+    display: inline-block;
+    font-size: 20px; /* Adjust size as needed */
+    color: #333; /* Text color */
+}
+
+.scroller .icon i {
+    font-size: 100px; /* Icon size */
+    margin-right: 5px; /* Space between icon and text */
+}
+
+@keyframes scroll {
+    30% { transform: translateX(10%); }
+    20% { transform: translateX(-10%); } /* Adjust based on the total width of the repeated items */
+}
